@@ -16,7 +16,7 @@ const WideDiv = () => {
           <div className="mb-4 -mt-9 lg:pr-3">
             <div className="flex items-center">
               <div className="flex items-center -ml-3 object-contain transition-transform hover:scale-105"> 
-                <img src= "/ICON2.png" alt="Description" className="w-20 h-15 rounded-lg" />
+                <img src= "/logo.png" alt="Description" className="w-20 h-15 rounded-lg" />
                 <img 
                   src="/images/icon1new.png" 
                   alt="Logo" 
