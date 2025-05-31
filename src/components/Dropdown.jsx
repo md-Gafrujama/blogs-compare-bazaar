@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import './Dropdown.css';
-import { Link } from 'next/link';
+import Link from 'next/link';
 
 const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }) => {
   const allSectionsContent = [
@@ -74,7 +74,7 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
                     {section.items.map((item) => (
                       <li key={item.link}>
                         <Link 
-                          to={item.link} 
+                          href={item.link} 
                           className={`mega-dropdown-item ${
                             activeNavItem === section.id ? 'active-item' : ''
                           }`}

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Dropdown from './Dropdown';
 import './Navbar.css';
-import Link from 'next/link'; // Correct import
+import Link from 'next/link';
 
 const Navbar = () => {
   const [activeDropdown, setActiveDropdown] = useState(null);
@@ -16,16 +16,22 @@ const Navbar = () => {
   // Handle screen resize
   useEffect(() => {
     const handleResize = () => {
-      const newIsMobile = window.innerWidth < 1024;
-      setIsMobile(newIsMobile);
+      if (typeof window !== 'undefined') {
+        const newIsMobile = window.innerWidth < 1024;
+        setIsMobile(newIsMobile);
 
-      // Close mobile menu if switching to desktop
-      if (!newIsMobile && mobileMenuOpen) {
-        setMobileMenuOpen(false);
+        // Close mobile menu if switching to desktop
+        if (!newIsMobile && mobileMenuOpen) {
+          setMobileMenuOpen(false);
+        }
       }
     };
 
-    handleResize();
+    // Initialize after mount
+    if (typeof window !== 'undefined') {
+      handleResize();
+    }
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, [mobileMenuOpen]);
@@ -33,10 +39,12 @@ const Navbar = () => {
   // Handle scroll effect
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
+      if (typeof window !== 'undefined') {
+        if (window.scrollY > 50) {
+          setScrolled(true);
+        } else {
+          setScrolled(false);
+        }
       }
     };
 
@@ -50,7 +58,6 @@ const Navbar = () => {
       if (navbarRef.current && !navbarRef.current.contains(event.target)) {
         setMobileMenuOpen(false);
         setActiveDropdown(null);
-        // Don't reset persistentActiveNavItem when clicking outside
       }
     };
 
@@ -61,32 +68,25 @@ const Navbar = () => {
   // Handle dropdown toggling
   const handleDropdownToggle = (dropdown) => {
     if (isMobile) {
-      // In mobile, toggle the dropdown
       setActiveDropdown(activeDropdown === dropdown ? null : dropdown);
     } else {
-      // In desktop, set the active dropdown
       setActiveDropdown(dropdown);
     }
   };
 
   // Handle nav item clicking
   const handleNavItemClick = (item) => {
-    // Update both active and persistent states
     setActiveNavItem(item);
     setPersistentActiveNavItem(prevItem => prevItem === item ? null : item);
 
     if (item === 'home') {
-      // Home has no dropdown, close any open dropdown
       setActiveDropdown(null);
     } else if (isMobile) {
-      // On mobile, toggle the dropdown
       handleDropdownToggle(item);
     } else {
-      // On desktop, always open the dropdown on click
       setActiveDropdown(item);
     }
 
-    // If mobile and clicking a nav item, don't close the menu
     if (!isMobile) {
       setMobileMenuOpen(false);
     }
@@ -104,7 +104,6 @@ const Navbar = () => {
   const handleMouseLeave = () => {
     if (!isMobile) {
       setActiveDropdown(null);
-      // Reset activeNavItem but keep persistentActiveNavItem
       setActiveNavItem(persistentActiveNavItem);
     }
   };
@@ -125,7 +124,7 @@ const Navbar = () => {
           <div className="navbar-content">
             {/* Logo */}
             <div className="navbar-logo">
-              <a href="/" className="logo-link">
+              <Link href="/" className="logo-link">
                 <div className="logo-text">
                   <div className="nav-img">
                     <img src="/logo.png" alt="Description" className="w-20 h-15 ml-1 rounded-lg" />
@@ -136,7 +135,7 @@ const Navbar = () => {
                     className="h-30 w-50 -ml-1 object-contain mx-2 transition-transform hover:scale-105" 
                   />
                 </div>
-              </a>
+              </Link>
             </div>
 
             {/* Navigation Links */}

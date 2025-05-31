@@ -5,6 +5,7 @@ import Navbar from './Navbar';
 import WideDiv from './WideDiv';
 
 
+
 export default function Frontpage() {
   const [email, setEmail] = useState('');
   const [isSubscribed, setIsSubscribed] = useState(false);
