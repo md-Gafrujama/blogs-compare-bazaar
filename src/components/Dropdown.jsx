@@ -74,7 +74,7 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
                     {section.items.map((item) => (
                       <li key={item.link}>
                         <Link 
-                          href={item.link} 
+                          to={item.link} 
                           className={`mega-dropdown-item ${
                             activeNavItem === section.id ? 'active-item' : ''
                           }`}
