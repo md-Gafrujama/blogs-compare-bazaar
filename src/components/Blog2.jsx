@@ -629,91 +629,83 @@ const Blog2 = () => {
         </div>
 
         {/* Share Section */}
- <div className="max-w-md mx-auto px-4 py-6">
-  <div className="bg-white p-6 rounded-2xl shadow-xl border border-gray-100">
-    <div className="flex flex-col items-center mb-4">
-      <svg xmlns="http://www.w3.org/2000/svg" className="h-8 w-8 text-indigo-600 mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-      </svg>
-      <p className="text-sm font-medium text-gray-500">Share this content</p>
-    </div>
-    
-    <div className="flex justify-center space-x-6">
-      {/* LinkedIn Button */}
-      <button 
-        onClick={shareOnLinkedIn}
-        className="p-3 bg-[#0A66C2] text-white rounded-full hover:bg-[#004182] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-        aria-label="Share on LinkedIn"
-      >
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-        </svg>
-      </button>
-      
-      {/* Universal Share Button with Gradient */}
-      <button 
-        onClick={shareContent}
-        className="p-3 bg-gradient-to-r from-blue-500 to-orange-500 text-white rounded-full hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
-        aria-label="Share content"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+<div className="max-w-md mx-auto px-4 py-6">
+  <div className="bg-white p-8 rounded-3xl shadow-2xl border border-gray-100 transform transition-all hover:scale-[1.01] hover:shadow-lg">
+    <div className="flex flex-col items-center mb-6">
+      <div className="relative mb-3">
+        <div className="absolute -inset-2 bg-indigo-100 rounded-full blur opacity-75 animate-pulse"></div>
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-indigo-600 relative" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
         </svg>
-      </button>
-      
-    
-      
-      {/* Copy Link Button */}
-      <button 
-        onClick={() => {
-          navigator.clipboard.writeText(currentUrl);
-          // Optional: Add a tooltip or animation here
-        }}
-        className="p-3 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 group relative"
-        aria-label="Copy link"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-        </svg>
-        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-black text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          Copy Link
-        </span>
-      </button>
+      </div>
+      <p className="text-sm font-medium text-gray-500 tracking-wider">SHARE THIS CONTENT</p>
+      <div className="mt-2 w-12 h-1 bg-gradient-to-r from-indigo-400 to-purple-400 rounded-full"></div>
     </div>
     
-    {/* Bonus: Link preview with copy animation */}
-    <div className="mt-6 relative">
-      <div className="flex items-center bg-gray-50 rounded-lg p-3 pr-10">
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-gray-400 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" />
-        </svg>
-        <span className="text-sm text-gray-600 truncate">{currentUrl}</span>
+    <div className="flex justify-center space-x-8">
+      {/* LinkedIn Button */}
+      <div className="relative group">
+        <div className="absolute -inset-0.5 bg-blue-600 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-300 animate-tilt"></div>
+        <button 
+          onClick={shareOnLinkedIn}
+          className="relative p-4 bg-[#0A66C2] text-white rounded-full hover:bg-[#004182] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+          aria-label="Share on LinkedIn"
+        >
+          <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+          </svg>
+        </button>
+        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Share on LinkedIn
+        </span>
       </div>
-      <button 
-        onClick={() => {
-          navigator.clipboard.writeText(currentUrl);
-          // Add animation here
-          const copyBtn = document.getElementById('copy-btn');
-          copyBtn.innerHTML = `
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
-            </svg>
-          `;
-          setTimeout(() => {
-            copyBtn.innerHTML = `
-              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
-              </svg>
-            `;
-          }, 2000);
-        }}
-        id="copy-btn"
-        className="absolute right-2 top-1/2 transform -translate-y-1/2 p-1 text-gray-500 hover:text-gray-700"
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+      
+      {/* Universal Share Button with Gradient */}
+      <div className="relative group">
+        <div className="absolute -inset-0.5 bg-gradient-to-r from-blue-500 to-orange-500 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-300 animate-tilt"></div>
+        <button 
+          onClick={shareContent}
+          className="relative p-4 bg-gradient-to-r from-blue-500 to-orange-500 text-white rounded-full hover:opacity-90 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+          aria-label="Share content"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+          </svg>
+        </button>
+        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Share Options
+        </span>
+      </div>
+      
+      {/* Copy Link Button */}
+      <div className="relative group">
+        <div className="absolute -inset-0.5 bg-gray-800 rounded-full blur opacity-75 group-hover:opacity-100 transition-all duration-300 animate-tilt"></div>
+        <button 
+          onClick={() => {
+            navigator.clipboard.writeText(currentUrl);
+            // Optional: Add a tooltip or animation here
+          }}
+          className="relative p-4 bg-gray-800 text-white rounded-full hover:bg-gray-900 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center"
+          aria-label="Copy link"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3" />
+          </svg>
+        </button>
+        <span className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs py-1 px-2 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Copy to Clipboard
+        </span>
+      </div>
+    </div>
+    
+    {/* Success notification (hidden by default) */}
+    <div className="mt-6 opacity-0 transition-opacity duration-300 pointer-events-none" id="copy-success">
+      <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded text-sm flex items-center">
+        <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+          <path d="M12.432 0c1.34 0 2.01.912 2.01 1.957 0 1.305-1.164 2.512-2.679 2.512-1.269 0-2.009-.75-1.974-1.99C9.789 1.436 10.67 0 12.432 0zM8.309 20c-1.058 0-1.833-.652-1.093-3.524l1.214-5.092c.211-.814.246-1.141 0-1.141-.317 0-1.689.562-2.502 1.117l-.528-.88c2.572-2.186 5.531-3.467 6.801-3.467 1.057 0 1.233 1.273.705 3.23l-1.391 5.352c-.246.945-.141 1.271.106 1.271.317 0 1.357-.392 2.379-1.207l.6.814C12.098 19.02 9.365 20 8.309 20z"/>
         </svg>
-      </button>
+        Link copied to clipboard!
+      </div>
     </div>
   </div>
 </div>
