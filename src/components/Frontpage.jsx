@@ -118,7 +118,7 @@ export default function Frontpage() {
       date: "June 5, 2025",
       readTime: "5 min read",
       category: "Informative",
-      imageUrl: "https://blogs.compare-bazaar.com/images/Payroll.webp",
+      imageUrl: "https://blogs.compare-bazaar.com/images/voip.webp",
       slug: "/VoIP",
       views: Math.floor(Math.random() * 500 + 100),
       likes: Math.floor(Math.random() * 200 + 50)
