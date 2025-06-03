@@ -279,8 +279,8 @@ const Navbar = () => {
                   <div className="mobile-dropdown-category">
                     <ul className="category-items">
                       <li><Link href="https://www.compare-bazaar.com/BestCRMSoftware" className="category-item-link">Best CRM Software</Link></li>
-                      <li><Link href="/EmailMarketing" className="category-item-link">Best Email Marketing Services</Link></li>
-                      <li><Link href="/BestWebsiteBuildingPlatform" className="category-item-link">Best Website Building Platform</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/EmailMarketing" className="category-item-link">Best Email Marketing Services</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/BestWebsiteBuildingPlatform" className="category-item-link">Best Website Building Platform</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -304,10 +304,10 @@ const Navbar = () => {
                 <div className="mobile-dropdown-content">
                   <div className="mobile-dropdown-category">
                     <ul className="category-items">
-                      <li><Link href="/phone-systems" className="category-item-link">Business Phone System</Link></li>
-                      <li><Link href="/GpsFleetMangement" className="category-item-link">GPS Fleet Management Software</Link></li>
-                      <li><Link href="/BestEmployeeMangementSoftware" className="category-item-link">Best Employee Management Software</Link></li>
-                      <li><Link href="/BestPayrollSystem" className="category-item-link">Best Payroll System</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/phone-systems" className="category-item-link">Business Phone System</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/GpsFleetMangement" className="category-item-link">GPS Fleet Management Software</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/BestEmployeeMangementSoftware" className="category-item-link">Best Employee Management Software</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/BestPayrollSystem" className="category-item-link">Best Payroll System</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -331,7 +331,7 @@ const Navbar = () => {
                 <div className="mobile-dropdown-content">
                   <div className="mobile-dropdown-category">
                     <ul className="category-items">
-                      <li><Link href="/WhitePaper" className="category-item-link">WhitePaper</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/WhitePaper" className="category-item-link">WhitePaper</Link></li>
                       <li><a href="https://blogs.compare-bazaar.com/" className="category-item-link" target="_blank" rel="noopener noreferrer">Blogs</a></li>
                     </ul>
                   </div>
@@ -357,8 +357,8 @@ const Navbar = () => {
                   <div className="mobile-dropdown-category">
                     <ul className="category-items">
                       <li><Link href="https://www.compare-bazaar.com/BestCRMSoftware" className="category-item-link">Best CRM Software</Link></li>
-                      <li><Link href="/Callcenter" className="category-item-link">Best Call Center Management Software</Link></li>
-                      <li><Link href="/BestProjectManagement" className="category-item-link">Best Project Management Software</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/Callcenter" className="category-item-link">Best Call Center Management Software</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/BestProjectManagement" className="category-item-link">Best Project Management Software</Link></li>
                     </ul>
                   </div>
                 </div>
@@ -382,9 +382,9 @@ const Navbar = () => {
                 <div className="mobile-dropdown-content">
                   <div className="mobile-dropdown-category">
                     <ul className="category-items">
-                      <li><Link href="/contact-sales" className="category-item-link">Contact</Link></li>
-                      <li><Link href="/About us" className="category-item-link">About</Link></li>
-                      <li><Link href="/Careers" className="category-item-link">Career</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/contact-sales" className="category-item-link">Contact</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/About%20us" className="category-item-link">About</Link></li>
+                      <li><Link href="https://www.compare-bazaar.com/Careers" className="category-item-link">Career</Link></li>
                     </ul>
                   </div>
                 </div>

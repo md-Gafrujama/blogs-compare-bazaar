@@ -10,25 +10,25 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
       title: "Marketing",
       items: [
         { name: "Best CRM Software", link: "https://www.compare-bazaar.com/BestCRMSoftware" },
-        { name: "Best Email Marketing Services", link: "/EmailMarketing" },
-        { name: "Best Website Building Platforms", link: "/BestWebsiteBuildingPlatform" }
+        { name: "Best Email Marketing Services", link: "https://www.compare-bazaar.com/EmailMarketing" },
+        { name: "Best Website Building Platforms", link: "https://www.compare-bazaar.com/BestWebsiteBuildingPlatform" }
       ]
     },
     {
       id: 'technology',
       title: "Technology",
       items: [
-        { name: "Business Phone Systems", link: "/phone-systems" },
-        { name: "GPS Fleet Management Software", link: "/GpsFleetMangement" },
-        { name: "Best Employee Management Software", link: "/BestEmployeeMangementSoftware" },
-        { name: "Best Payroll System", link: "/BestPayrollSystem" }
+        { name: "Business Phone Systems", link: "https://www.compare-bazaar.com/phone-systems" },
+        { name: "GPS Fleet Management Software", link: "https://www.compare-bazaar.com/GpsFleetMangement" },
+        { name: "Best Employee Management Software", link: "https://www.compare-bazaar.com/BestEmployeeMangementSoftware" },
+        { name: "Best Payroll System", link: "https://www.compare-bazaar.com/BestPayrollSystem" }
       ]
     },
     {
       id: 'blog',
       title: "Resources",
       items: [
-        { name: "WhitePaper", link: "/WhitePaper" },
+        { name: "WhitePaper", link: "https://www.compare-bazaar.com/WhitePaper" },
         { name: "Blogs", link: "https://blogs.compare-bazaar.com/" }
       ]
     },
@@ -37,17 +37,17 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
       title: "Sales",
       items: [
         { name: "Best CRM Software", link: "https://www.compare-bazaar.com/BestCRMSoftware" },
-        { name: "Best Call Center Management Software", link: "/Callcenter" },
-        { name: "Best Project Management Software", link: "/BestProjectManagement" }
+        { name: "Best Call Center Management Software", link: "https://www.compare-bazaar.com/Callcenter" },
+        { name: "Best Project Management Software", link: "https://www.compare-bazaar.com/BestProjectManagement" }
       ]
     },
     {
       id: 'contact',
       title: "Contact Us",
       items: [
-        { name: "Contact", link: "/contact-sales" },
-        { name: "About us", link: "/About us" },
-        { name: "Careers", link: "/Careers" }
+        { name: "Contact", link: "https://www.compare-bazaar.com/contact-sales" },
+        { name: "About us", link: "https://www.compare-bazaar.com/About%20us" },
+        { name: "Careers", link: "https://www.compare-bazaar.com/Careers" }
       ]
     }
   ];
