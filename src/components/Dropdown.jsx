@@ -9,7 +9,7 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
       id: 'marketing',
       title: "Marketing",
       items: [
-        { name: "Best CRM Software", link: "/BestCRMSoftware" },
+        { name: "Best CRM Software", link: "https://www.compare-bazaar.com/BestCRMSoftware" },
         { name: "Best Email Marketing Services", link: "/EmailMarketing" },
         { name: "Best Website Building Platforms", link: "/BestWebsiteBuildingPlatform" }
       ]
@@ -36,7 +36,7 @@ const Dropdown = ({ activeDropdown, isMobile, setActiveDropdown, activeNavItem }
       id: 'sales',
       title: "Sales",
       items: [
-        { name: "Best CRM Software", link: "/BestCRMSoftware" },
+        { name: "Best CRM Software", link: "https://www.compare-bazaar.com/BestCRMSoftware" },
         { name: "Best Call Center Management Software", link: "/Callcenter" },
         { name: "Best Project Management Software", link: "/BestProjectManagement" }
       ]
