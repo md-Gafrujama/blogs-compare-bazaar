@@ -44,7 +44,7 @@ const Blog3 = () => {
   }, []);
 
   const shareOnLinkedIn = () => {
-    const title = "TAI in HR & Payroll: How AI is reshaping HR & Payroll in 2025";
+    const title = "AI in HR & Payroll: How AI is reshaping HR & Payroll in 2025";
     const summary = "AI in HR & Payroll: How AI is reshaping HR & Payroll in 2025";
     const source = "Compare Bazaar";
 

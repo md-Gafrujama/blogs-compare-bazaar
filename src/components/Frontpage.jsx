@@ -103,7 +103,7 @@ export default function Frontpage() {
     },
     {
       id: 3,
-      title: "AI in HR & Payroll: How AI is reshaping HR & Payroll in 2025",
+      title: "AI in HR & Payroll: How Artificial Intelligence is Reshaping the Future of Work in 2025",
       date: "June 5, 2025",
       readTime: "5 min read",
       category: "Informative",
