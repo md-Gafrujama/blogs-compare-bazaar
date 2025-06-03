@@ -96,7 +96,7 @@ export default function Frontpage() {
       date: "May 12, 2025",
       readTime: "7 min read",
       category: "DeFi",
-      imageUrl: "https://blogs.compare-bazaar.com/images/Trigger.webp",
+      imageUrl: "https://blogs.compare-bazaar.com/images/techbuyer.webp",
      slug: "/buyer-journey",
       views: Math.floor(Math.random() * 500 + 100),
       likes: Math.floor(Math.random() * 200 + 50)
@@ -112,17 +112,17 @@ export default function Frontpage() {
       views: Math.floor(Math.random() * 500 + 100),
       likes: Math.floor(Math.random() * 200 + 50)
     },
-   {
-      id: 4,
-      title: "VoIP vs. Traditional Phone: What’s Right for Your Business?",
-      date: "June 5, 2025",
-      readTime: "5 min read",
-      category: "Informative",
-      imageUrl: "https://blogs.compare-bazaar.com/images/voip.webp",
-      slug: "/VoIP",
-      views: Math.floor(Math.random() * 500 + 100),
-      likes: Math.floor(Math.random() * 200 + 50)
-    },
+  //  {
+  //     id: 4,
+  //     title: "VoIP vs. Traditional Phone: What’s Right for Your Business?",
+  //     date: "June 5, 2025",
+  //     readTime: "5 min read",
+  //     category: "Informative",
+  //     imageUrl: "https://blogs.compare-bazaar.com/images/voip.webp",
+  //     slug: "/VoIP",
+  //     views: Math.floor(Math.random() * 500 + 100),
+  //     likes: Math.floor(Math.random() * 200 + 50)
+  //   },
   ];
 
   const categories = ['All', 'AI', 'MarTech', 'DeFi', 'NFTs', 'Metaverse', 'Security', 'Gaming'];

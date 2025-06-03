@@ -234,7 +234,7 @@ const Blog2 = () => {
           
           <div className="relative group">
             <img
-              src="https://blogs.compare-bazaar.com/images/Trigger.webp"
+              src="https://blogs.compare-bazaar.com/images/techbuyer.webp"
               alt="Tech buyer's journey"
               className="mx-auto rounded-xl shadow-2xl mb-8 w-full max-w-5xl aspect-[13/7] object-cover transform transition-all duration-700 group-hover:scale-[1.02] group-hover:shadow-2xl"
             />
