@@ -82,7 +82,7 @@ export default function Frontpage() {
     {
       id: 1,
       title: "How Comparison Quotes, Reviews, and Articles Help a Tech Buyer’s Journey",
-      date: "April, 2025",
+      date: " May 28, 2024",
       readTime: "5 min read",
       category: "MarTech",
       imageUrl: "https://blogs.compare-bazaar.com/images/blog1.jpg",
