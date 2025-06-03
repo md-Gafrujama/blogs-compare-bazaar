@@ -437,10 +437,10 @@ const Blog2 = () => {
 
 
 
-          {/* <div className="mt-8 group">
+          <div className="mt-8 group">
             <div className="relative overflow-hidden rounded-2xl shadow-xl">
               <img
-                src="/images/blog2_img.jpg"
+                src="https://blogs.compare-bazaar.com/images/Trigger.webp"
                 alt="Tech decision making process"
                 className="mx-auto w-full max-w-2xl  object-cover transform transition-all duration-700 group-hover:scale-105"
               />
@@ -449,7 +449,7 @@ const Blog2 = () => {
               </div>
             </div>
             <p className="text-center text-sm text-gray-500 mt-2">Hover to see details</p>
-          </div> */}
+          </div>
         </div>
 
 
