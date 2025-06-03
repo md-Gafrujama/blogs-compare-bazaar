@@ -2,22 +2,19 @@ import { notFound } from 'next/navigation';
 import Blog1 from '@/components/Blog1';
 import Blog2 from '@/components/Blog2';
 import Blog3 from '@/components/Blog3';
-
+import Blog4 from '@/components/Blog4';
 // Map slugs to blog components
 const blogComponents = {
-  'buyers-content-help': Blog1,
-  'buyer-journey': Blog2,
-  'AI-in-HR-Payroll': Blog3,
+  'buyers-content-help': <Blog1 />,
+  'buyer-journey': <Blog2 />,
+  'AI-in-HR-Payroll': <Blog3 />,
+  'VoIP': <Blog4 />
 };
 
-export default async function BlogPost({ params }) {
-  params = await params;
+export default function BlogPost({ params }) {
+  const content = blogComponents[params.slug];
 
-  if (!params || !params.slug) return notFound();
+  if (!content) return notFound();
 
-  const BlogComponent = blogComponents[params.slug];
-
-  if (!BlogComponent) return notFound();
-
-  return <BlogComponent />;
+  return content;
 }
