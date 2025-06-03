@@ -124,7 +124,7 @@ const Navbar = () => {
           <div className="navbar-content">
             {/* Logo */}
             <div className="navbar-logo">
-              <Link href="/" className="logo-link">
+              <Link href="https://www.compare-bazaar.com/" className="logo-link">
                 <div className="logo-text">
                   <div className="nav-img">
                     <img src="/logo.png" alt="Description" className="w-20 h-15 ml-1 rounded-lg" />
@@ -143,7 +143,7 @@ const Navbar = () => {
               {/* Home */}
               <div className="nav-item-container">
                 <Link
-                  href="/"
+                  href="https://www.compare-bazaar.com/"
                   className={`nav-item ${isNavItemActive('home') ? 'active' : ''}`}
                   onClick={() => handleNavItemClick('home')}
                   onMouseEnter={() => handleMouseEnter('home')}
@@ -248,7 +248,7 @@ const Navbar = () => {
             {/* Home */}
             <div className="mobile-menu-item">
               <Link
-                href="/"
+                href="https://www.compare-bazaar.com/"
                 className={`mobile-menu-button-item ${isNavItemActive('home') ? 'active' : ''}`}
                 onClick={() => {
                   handleNavItemClick('home');
