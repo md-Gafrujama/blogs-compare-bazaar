@@ -401,7 +401,7 @@ const Blog1 = () => {
                 <p className="text-white text-lg font-medium">Making informed tech decisions with Compare Bazaar</p>
               </div>
             </div>
-            <p className="text-center text-sm text-gray-500 mt-2">Hover to see details</p>
+           
           </div> */}
         </div>
 
