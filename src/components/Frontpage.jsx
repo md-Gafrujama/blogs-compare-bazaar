@@ -216,25 +216,25 @@ export default function Frontpage() {
             })}
           </div>
 
-          <div className="container mx-auto px-4 md:px-8 relative z-10">
+          <div className="container mx-auto   relative z-10">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
               {/* Left side - Main heading */}
               <div className="lg:w-2/3 text-center lg:text-left">
-                <div className="mb-6">
-                  <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-semibold border border-white/30 shadow-lg animate-bounce hover:animate-none hover:scale-105 transition-transform hover:bg-white/30 interactive">
-                    🚀 Web3 Insights Hub
+                <div className="mb-2">
+                  <span className="inline-block px-2 py-3 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-semibold border border-white/30 shadow-lg animate-bounce hover:animate-none hover:scale-105 transition-transform hover:bg-white/30 interactive just justify-content">
+                    Compare Chronicles 📝
                   </span>
                 </div>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl sm:text-4xl md:text-3xl font-bold text-white mb-3 leading-tight">
                   <span className="inline-block bg-gradient-to-r from-[#64b5f6] via-[#42a5f5] to-[#90caf9] bg-clip-text text-transparent animate-gradient">
-                    Future Tech
+                    Procurement Insights & Vendor 
                   </span>{' '}
                   <span className="inline-block bg-gradient-to-r from-[#ff9a3c] via-[#ff8633] to-[#ff6f00] bg-clip-text text-transparent animate-gradient delay-100">
-                    Insights
+                   Comparison Tips | Compare-Bazaar Blog
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-                  Explore the cutting-edge world of Web3, blockchain, AI, and decentralized technologies through our comprehensive guides and expert analysis.
+                 and uska description :Explore expert-driven insights on vendor selection, procurement strategies, and cost-saving comparisons. Stay informed with the Compare-Bazaar Blog.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button 
