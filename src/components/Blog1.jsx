@@ -502,65 +502,221 @@ const Blog1 = () => {
         </div>
 
         {/* Subscribe Card */}
-        <div className="max-w-2xl mx-auto px-4 py-8">
-          <div className="bg-white p-8 rounded-2xl shadow-xl border border-gray-200 hover:shadow-2xl transition-all duration-500">
-            <h3 className="text-2xl font-bold text-center text-[#0A3761] mb-2 bg-gradient-to-r from-[#0A3761] to-blue-600 bg-clip-text text-transparent"> 
-              Stay Updated
-            </h3>
-            <p className="text-gray-600 text-center mb-6">
-              Subscribe to the very latest B2B lead gen updates — only the best bits, none of the fluff!
-            </p>
-            
-            <div className="space-y-4">
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                  Email Address*
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#0A3761] focus:border-[#0A3761] transition hover:border-gray-400"
-                  placeholder="your@email.com"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  disabled={loading}
-                />
-              </div>
-              
-              <button
-                onClick={handleSubscribe}
-                disabled={loading}
-                className={`w-full ${
-                  subscribed ? 'bg-green-600' : 'bg-gradient-to-r from-[#ff8633] to-orange-500 hover:from-[#e6732b] hover:to-orange-600'
-                } text-white font-semibold py-3 px-6 rounded-lg shadow-md transition-all duration-200 transform hover:scale-[1.02] mt-2 disabled:opacity-70 disabled:hover:scale-100 flex items-center justify-center`}
-              >
-                {loading ? (
-                  <>
-                    <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                    </svg>
-                    Subscribing...
-                  </>
-                ) : subscribed ? (
-                  <>
-                    <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    Subscribed!
-                  </>
-                ) : (
-                  "Subscribe Now"
-                )}
-              </button>
-              
-              <p className="text-xs text-gray-500 text-center">
-                We respect your privacy. Unsubscribe at any time.
-              </p>
-            </div>
+      <div className="max-w-2xl mx-auto px-4 py-8">
+  <div className="group relative bg-black rounded-3xl shadow-2xl border border-gray-800 hover:border-purple-500 transition-all duration-1000 overflow-hidden">
+    
+    {/* Animated matrix background */}
+    <div className="absolute inset-0 opacity-20">
+      <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-purple-900/30 via-blue-900/30 to-cyan-900/30"></div>
+      <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.3),transparent_50%)]"></div>
+      <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(255,134,51,0.2),transparent_50%)]"></div>
+    </div>
+    
+    {/* Floating geometric shapes */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000">
+      <div className="absolute top-8 right-12 w-6 h-6 border-2 border-cyan-400 rotate-45 animate-spin" style={{animationDuration: '8s'}}></div>
+      <div className="absolute bottom-12 left-8 w-4 h-4 bg-purple-500 rotate-45 animate-bounce"></div>
+      <div className="absolute top-16 left-16 w-3 h-3 bg-orange-400 rounded-full animate-pulse"></div>
+      <div className="absolute bottom-8 right-20 w-8 h-1 bg-gradient-to-r from-cyan-400 to-purple-400 animate-pulse"></div>
+      <div className="absolute top-20 right-6 w-1 h-8 bg-gradient-to-b from-purple-400 to-pink-400 animate-pulse" style={{animationDelay: '0.5s'}}></div>
+    </div>
+    
+    {/* Holographic border */}
+    <div className="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-500 via-purple-500 via-pink-500 to-orange-500 p-[2px] animate-pulse">
+      <div className="w-full h-full bg-black rounded-3xl"></div>
+    </div>
+    
+    {/* Neon glow effects */}
+    <div className="absolute -inset-4 bg-gradient-to-r from-purple-600/20 via-blue-600/20 to-cyan-600/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-1000 animate-pulse"></div>
+    
+    <div className="relative z-10 p-8">
+      {/* Futuristic header */}
+      <div className="text-center mb-10">
+        {/* Animated icon container */}
+        <div className="relative inline-block mb-6">
+          <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-2xl blur-xl opacity-60 animate-pulse"></div>
+          <div className="relative bg-gradient-to-r from-purple-600 via-blue-600 to-cyan-500 p-4 rounded-2xl shadow-2xl">
+            <svg className="w-10 h-10 text-white animate-pulse" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+          </div>
+          
+          {/* Orbiting particles */}
+          <div className="absolute inset-0 animate-spin" style={{animationDuration: '10s'}}>
+            <div className="absolute -top-2 left-1/2 w-2 h-2 bg-cyan-400 rounded-full"></div>
+            <div className="absolute top-1/2 -right-2 w-1 h-1 bg-purple-400 rounded-full"></div>
+            <div className="absolute -bottom-2 left-1/2 w-1.5 h-1.5 bg-pink-400 rounded-full"></div>
+            <div className="absolute top-1/2 -left-2 w-1 h-1 bg-orange-400 rounded-full"></div>
           </div>
         </div>
+        
+        {/* Glitch effect title */}
+        <h3 className="text-4xl font-black mb-4 bg-gradient-to-r from-cyan-400 via-purple-400 via-pink-400 to-orange-400 bg-clip-text text-transparent group-hover:animate-pulse">
+          STAY CONNECTED
+        </h3>
+        
+        {/* Animated underline */}
+        <div className="relative mx-auto mb-6">
+          <div className="w-32 h-1 bg-gradient-to-r from-cyan-500 to-purple-500 mx-auto rounded-full"></div>
+          <div className="absolute inset-0 w-32 h-1 bg-gradient-to-r from-purple-500 to-pink-500 mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-pulse"></div>
+        </div>
+        
+        {/* Cyberpunk description */}
+        <p className="text-gray-300 text-lg leading-relaxed max-w-md mx-auto">
+          Join the <span className="text-cyan-400 font-bold">neural network</span> of elite B2B professionals. 
+          <span className="text-purple-400 font-bold"> Access granted</span> to premium intel only.
+        </p>
+      </div>
+      
+      <div className="space-y-8">
+        {/* Futuristic email input */}
+        <div className="relative group/input">
+          <label htmlFor="email" className="block text-sm font-bold text-cyan-400 mb-3 flex items-center">
+            <div className="w-3 h-3 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full mr-2 animate-pulse"></div>
+            <span className="tracking-wider">NEURAL LINK ADDRESS</span>
+            <span className="text-red-400 ml-1">*</span>
+          </label>
+          
+          <div className="relative">
+            {/* Input glow background */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 rounded-2xl blur-xl opacity-0 group-hover/input:opacity-100 transition-all duration-500"></div>
+            
+            <input
+              type="email"
+              id="email"
+              required
+              className="relative w-full px-6 py-5 bg-gray-900/80 border-2 border-gray-700 rounded-2xl focus:ring-4 focus:ring-cyan-500/30 focus:border-cyan-400 transition-all duration-500 hover:border-purple-400 backdrop-blur-sm text-white placeholder-gray-400 font-medium group-hover/input:bg-gray-800/80 group-hover/input:shadow-2xl"
+              placeholder="neural.link@matrix.net"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              disabled={loading}
+            />
+            
+            {/* Scanning line effect */}
+            <div className="absolute inset-0 opacity-0 group-hover/input:opacity-100 transition-opacity duration-500 pointer-events-none">
+              <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-cyan-400/20 to-transparent animate-pulse rounded-2xl"></div>
+            </div>
+            
+            {/* Holographic input icon */}
+            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 group-hover/input:text-cyan-400 transition-all duration-300">
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            
+            {/* Corner brackets */}
+            <div className="absolute top-1 left-1 w-4 h-4 border-l-2 border-t-2 border-cyan-400 opacity-0 group-hover/input:opacity-100 transition-opacity duration-300"></div>
+            <div className="absolute bottom-1 right-1 w-4 h-4 border-r-2 border-b-2 border-purple-400 opacity-0 group-hover/input:opacity-100 transition-opacity duration-300"></div>
+          </div>
+        </div>
+        
+        {/* Cyberpunk subscribe button */}
+        <div className="relative group/button">
+          <button
+            onClick={handleSubscribe}
+            disabled={loading}
+            className={`relative w-full ${
+              subscribed 
+                ? 'bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 shadow-2xl shadow-green-500/50' 
+                : 'bg-gradient-to-r from-orange-500 via-red-500 via-purple-600 to-blue-600 hover:from-red-600 hover:via-purple-700 hover:to-blue-700 shadow-2xl shadow-purple-500/50'
+            } text-white font-black py-5 px-8 rounded-2xl transition-all duration-700 transform hover:scale-105 hover:-translate-y-2 disabled:opacity-70 disabled:hover:scale-100 disabled:hover:translate-y-0 flex items-center justify-center overflow-hidden border-2 ${
+              subscribed ? 'border-green-400' : 'border-purple-500 hover:border-cyan-400'
+            }`}
+          >
+            
+            {/* Matrix-style background */}
+            <div className="absolute inset-0 opacity-0 group-hover/button:opacity-100 transition-opacity duration-500">
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent transform -skew-x-12 animate-pulse"></div>
+              <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] bg-[length:20px_20px] animate-pulse"></div>
+            </div>
+            
+            {/* Holographic sweep */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-400/30 to-transparent transform -skew-x-12 opacity-0 group-hover/button:opacity-100 group-hover/button:translate-x-full transition-all duration-1000"></div>
+            
+            {/* Button content */}
+            <div className="relative z-10 flex items-center">
+              {loading ? (
+                <>
+                  <div className="relative mr-4">
+                    <div className="w-6 h-6 border-2 border-white/30 border-t-white rounded-full animate-spin"></div>
+                    <div className="absolute inset-0 w-6 h-6 border-2 border-cyan-400/50 border-r-cyan-400 rounded-full animate-spin" style={{animationDirection: 'reverse', animationDuration: '0.8s'}}></div>
+                  </div>
+                  <span className="font-black tracking-widest text-lg">CONNECTING...</span>
+                </>
+              ) : subscribed ? (
+                <>
+                  <div className="relative mr-4">
+                    <svg className="w-7 h-7 animate-bounce" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="4" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-30"></div>
+                  </div>
+                  <span className="font-black tracking-widest text-lg">NEURAL LINK ESTABLISHED!</span>
+                </>
+              ) : (
+                <>
+                  <span className="font-black tracking-widest text-lg">INITIALIZE CONNECTION</span>
+                  <div className="ml-4 relative">
+                    <svg className="w-6 h-6 transition-transform duration-300 group-hover/button:translate-x-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                    </svg>
+                    <div className="absolute inset-0 bg-white rounded-full opacity-0 group-hover/button:opacity-30 animate-ping"></div>
+                  </div>
+                </>
+              )}
+            </div>
+            
+            {/* Energy particles */}
+            {!loading && !subscribed && (
+              <div className="absolute inset-0 opacity-0 group-hover/button:opacity-100 transition-opacity duration-300 pointer-events-none">
+                <div className="absolute top-2 right-6 w-1 h-1 bg-cyan-400 rounded-full animate-ping"></div>
+                <div className="absolute bottom-3 left-8 w-1 h-1 bg-purple-400 rounded-full animate-ping" style={{animationDelay: '0.2s'}}></div>
+                <div className="absolute top-4 left-6 w-0.5 h-0.5 bg-pink-400 rounded-full animate-ping" style={{animationDelay: '0.4s'}}></div>
+                <div className="absolute bottom-2 right-8 w-0.5 h-0.5 bg-orange-400 rounded-full animate-ping" style={{animationDelay: '0.6s'}}></div>
+              </div>
+            )}
+            
+            {/* Button glow */}
+            <div className="absolute -inset-2 bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 rounded-2xl opacity-0 group-hover/button:opacity-40 transition-opacity duration-500 blur-xl -z-10"></div>
+          </button>
+        </div>
+        
+        {/* Cyberpunk privacy notice */}
+        <div className="text-center">
+          <div className="inline-flex items-center px-6 py-3 bg-gray-900/60 border border-gray-700 rounded-full text-sm text-gray-400 hover:bg-gray-800/60 hover:border-cyan-500/50 transition-all duration-500 backdrop-blur-sm">
+            <div className="relative mr-3">
+              <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+              </svg>
+              <div className="absolute inset-0 bg-green-400 rounded-full animate-ping opacity-20"></div>
+            </div>
+            <span className="font-semibold">
+              <span className="text-cyan-400">ENCRYPTED</span> • 
+              <span className="text-purple-400"> SECURE</span> • 
+              <span className="text-green-400"> ANONYMOUS</span>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Cyberpunk corner elements */}
+    <div className="absolute top-6 left-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+      <div className="w-8 h-8 border-l-3 border-t-3 border-cyan-400 animate-pulse"></div>
+      <div className="absolute -top-1 -left-1 w-2 h-2 bg-cyan-400 animate-ping"></div>
+    </div>
+    <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-all duration-500">
+      <div className="w-8 h-8 border-r-3 border-b-3 border-purple-400 animate-pulse"></div>
+      <div className="absolute -bottom-1 -right-1 w-2 h-2 bg-purple-400 animate-ping"></div>
+    </div>
+    
+    {/* Scanning lines */}
+    <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 pointer-events-none">
+      <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-400 to-transparent animate-pulse"></div>
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-400 to-transparent animate-pulse" style={{animationDelay: '0.5s'}}></div>
+    </div>
+  </div>
+</div>
 
         {/* Share Section gafru */}
         <div className="max-w-md mx-auto px-4 py-6">
