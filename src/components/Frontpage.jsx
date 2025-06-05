@@ -216,25 +216,25 @@ export default function Frontpage() {
             })}
           </div>
 
-          <div className="container mx-auto   relative z-10">
+           <div className="container mx-auto px-4 md:px-8 relative z-10">
             <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-12">
               {/* Left side - Main heading */}
               <div className="lg:w-2/3 text-center lg:text-left">
-                <div className="mb-2">
-                  <span className="inline-block px-2 py-3 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-semibold border border-white/30 shadow-lg animate-bounce hover:animate-none hover:scale-105 transition-transform hover:bg-white/30 interactive just justify-content">
-                    Compare Chronicles 📝
+                <div className="mb-6">
+                  <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-md rounded-full text-white text-sm font-semibold border border-white/30 shadow-lg animate-bounce hover:animate-none hover:scale-105 transition-transform hover:bg-white/30 interactive">
+                    🚀 Web3 Insights Hub
                   </span>
                 </div>
-                <h1 className="text-4xl sm:text-5xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
                   <span className="inline-block bg-gradient-to-r from-[#64b5f6] via-[#42a5f5] to-[#90caf9] bg-clip-text text-transparent animate-gradient">
-                    Procurement Insights & Vendor 
+                    Future Tech
                   </span>{' '}
                   <span className="inline-block bg-gradient-to-r from-[#ff9a3c] via-[#ff8633] to-[#ff6f00] bg-clip-text text-transparent animate-gradient delay-100">
-                   Comparison Tips | Compare-Bazaar Blog
+                    Insights
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-white/90 mb-8 leading-relaxed max-w-3xl">
-                 and uska description :Explore expert-driven insights on vendor selection, procurement strategies, and cost-saving comparisons. Stay informed with the Compare-Bazaar Blog.
+                  Explore the cutting-edge world of Web3, blockchain, AI, and decentralized technologies through our comprehensive guides and expert analysis.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button 
@@ -361,6 +361,7 @@ export default function Frontpage() {
             </div>
           </div>
         </div>
+        
 
         {/* Main Blog Content */}
         <div id="blog-section" className="container mx-auto px-4 md:px-8 py-12 md:py-16">
@@ -639,45 +640,134 @@ function BlogCard({ post, index, hoveredCard, setHoveredCard, mouseX, mouseY }) 
             {post.title}
           </h3>
           
-          {/* Footer with read more and actions */}
-          <div className="mt-auto flex items-center justify-between pt-4 border-t border-gray-100">
-            <div className="inline-flex items-center text-blue-600 font-medium text-sm group-hover:text-blue-700 transition-colors duration-200">
-              Read More
-              <svg className="w-4 h-4 ml-1 transition-transform duration-200 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </div>
-            <div className="flex space-x-1">
-              <button 
-                onClick={handleLike} 
-                className="p-1.5 text-gray-400 hover:text-red-500 transition-colors transform hover:scale-125"
-                aria-label="Save to favorites"
-              >
-                <svg 
-                  className={`w-4 h-4 ${isLiked ? 'fill-red-500 text-red-500' : ''}`} 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={isLiked ? 0 : 2} 
-                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" 
-                  />
-                </svg>
-                <span className="sr-only">{likeCount} likes</span>
-              </button>
-              <button 
-                onClick={(e) => e.preventDefault()} 
-                className="p-1.5 text-gray-400 hover:text-blue-500 transition-colors transform hover:scale-125"
-                aria-label="Share article"
-              >
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-                </svg>
-              </button>
-            </div>
+          {/*  gafruu  Footer with read more and actions */}
+         <div className="mt-auto relative">
+  {/* Animated gradient border */}
+  <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-purple-500 to-transparent opacity-60"></div>
+  
+  {/* Floating particles background */}
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute top-2 left-4 w-1 h-1 bg-blue-400 rounded-full animate-ping opacity-60"></div>
+    <div className="absolute top-4 right-8 w-0.5 h-0.5 bg-purple-400 rounded-full animate-pulse opacity-40" style={{animationDelay: '0.5s'}}></div>
+    <div className="absolute bottom-3 left-12 w-0.5 h-0.5 bg-cyan-400 rounded-full animate-bounce opacity-50" style={{animationDelay: '1s'}}></div>
+  </div>
+  
+  <div className="flex items-center justify-between pt-6 px-1">
+    
+    {/* Enhanced Read More Button */}
+    <div className="group relative inline-flex items-center px-8 py-3.5 overflow-hidden font-bold text-white transition-all duration-500 bg-black rounded-2xl shadow-xl hover:shadow-2xl hover:shadow-purple-500/50 transform hover:scale-110 hover:-translate-y-2 cursor-pointer border border-gray-700 hover:border-purple-400">
+      
+      {/* Multiple background layers */}
+      <div className="absolute inset-0 bg-gradient-to-r from-purple-900 via-blue-900 to-cyan-900 opacity-90 rounded-2xl"></div>
+      <div className="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-cyan-500 opacity-0 group-hover:opacity-100 transition-all duration-700 rounded-2xl"></div>
+      
+      {/* Holographic sweep */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent opacity-0 group-hover:opacity-100 transform -skew-x-12 transition-all duration-1000 group-hover:translate-x-full rounded-2xl"></div>
+      
+      {/* Glowing border effect */}
+      <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 p-[1px]">
+        <div className="w-full h-full bg-black rounded-2xl"></div>
+      </div>
+      
+      {/* Content */}
+      <span className="relative z-20 text-sm font-extrabold tracking-wider bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent group-hover:from-white group-hover:via-cyan-200 group-hover:to-purple-200 transition-all duration-500">
+        READ MORE
+      </span>
+      
+      {/* Enhanced arrow with trail */}
+      <div className="relative z-20 ml-3 w-6 h-6 transition-all duration-500 group-hover:translate-x-2 group-hover:scale-125">
+        <div className="absolute inset-0 bg-gradient-to-r from-cyan-400 to-purple-400 rounded-full opacity-0 group-hover:opacity-60 blur-sm animate-pulse"></div>
+        <svg className="relative w-full h-full transition-all duration-500 group-hover:rotate-12 text-cyan-400 group-hover:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+        </svg>
+      </div>
+      
+      {/* Corner accents */}
+      <div className="absolute top-1 left-1 w-3 h-3 border-l-2 border-t-2 border-cyan-400 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-tl-lg"></div>
+      <div className="absolute bottom-1 right-1 w-3 h-3 border-r-2 border-b-2 border-purple-400 opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-br-lg"></div>
+    </div>
+    
+    {/* Enhanced Action Buttons */}
+    <div className="flex items-center space-x-3">
+      
+      {/* Like Button */}
+      <div className="group relative">
+        <button
+          onClick={() => setIsLiked(!isLiked)}
+          className="relative p-3 text-gray-400 hover:text-red-500 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 bg-gray-50 hover:bg-red-50 rounded-xl shadow-sm hover:shadow-lg hover:shadow-red-500/25 border border-gray-200 hover:border-red-300"
+          aria-label="Save to favorites"
+        >
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
+          
+          {/* Heart icon with pulse effect */}
+          <div className="relative">
+            <svg
+              className={`w-5 h-5 transition-all duration-300 ${isLiked ? 'fill-red-500 text-red-500 scale-110' : 'group-hover:scale-110'} ${isLiked ? 'animate-pulse' : ''}`}
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={isLiked ? 0 : 2}
+                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+              />
+            </svg>
+            
+            {/* Like animation particles */}
+            {isLiked && (
+              <div className="absolute inset-0 pointer-events-none">
+                <div className="absolute -top-1 -right-1 w-1 h-1 bg-red-400 rounded-full animate-ping"></div>
+                <div className="absolute -bottom-1 -left-1 w-0.5 h-0.5 bg-pink-400 rounded-full animate-bounce"></div>
+              </div>
+            )}
           </div>
+          
+          {/* Ripple effect */}
+          <div className="absolute inset-0 rounded-xl border-2 border-red-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 animate-ping"></div>
+        </button>
+        
+        {/* Floating like count */}
+        <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
+          {likeCount}
+        </div>
+      </div>
+      
+      {/* Share Button */}
+      <div className="group relative">
+        <button
+          onClick={(e) => e.preventDefault()}
+          className="relative p-3 text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 bg-gray-50 hover:bg-blue-50 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/25 border border-gray-200 hover:border-blue-300"
+          aria-label="Share article"
+        >
+          {/* Animated background */}
+          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
+          
+          {/* Share icon with rotation */}
+          <svg className="w-5 h-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
+          </svg>
+          
+          {/* Share animation lines */}
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+            <div className="absolute top-2 right-2 w-4 h-px bg-blue-400 transform rotate-45 animate-pulse"></div>
+            <div className="absolute bottom-2 left-2 w-3 h-px bg-cyan-400 transform -rotate-45 animate-pulse" style={{animationDelay: '0.2s'}}></div>
+          </div>
+          
+          {/* Ripple effect */}
+          <div className="absolute inset-0 rounded-xl border-2 border-blue-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 animate-ping"></div>
+        </button>
+        
+        {/* Share tooltip */}
+        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
+          Share
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
         </div>
          
       </div>
