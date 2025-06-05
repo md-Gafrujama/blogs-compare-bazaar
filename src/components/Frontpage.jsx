@@ -691,79 +691,10 @@ function BlogCard({ post, index, hoveredCard, setHoveredCard, mouseX, mouseY }) 
     <div className="flex items-center space-x-3">
       
       {/* Like Button */}
-      <div className="group relative">
-        <button
-          onClick={() => setIsLiked(!isLiked)}
-          className="relative p-3 text-gray-400 hover:text-red-500 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 bg-gray-50 hover:bg-red-50 rounded-xl shadow-sm hover:shadow-lg hover:shadow-red-500/25 border border-gray-200 hover:border-red-300"
-          aria-label="Save to favorites"
-        >
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-pink-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
-          
-          {/* Heart icon with pulse effect */}
-          <div className="relative">
-            <svg
-              className={`w-5 h-5 transition-all duration-300 ${isLiked ? 'fill-red-500 text-red-500 scale-110' : 'group-hover:scale-110'} ${isLiked ? 'animate-pulse' : ''}`}
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={isLiked ? 0 : 2}
-                d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
-              />
-            </svg>
-            
-            {/* Like animation particles */}
-            {isLiked && (
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute -top-1 -right-1 w-1 h-1 bg-red-400 rounded-full animate-ping"></div>
-                <div className="absolute -bottom-1 -left-1 w-0.5 h-0.5 bg-pink-400 rounded-full animate-bounce"></div>
-              </div>
-            )}
-          </div>
-          
-          {/* Ripple effect */}
-          <div className="absolute inset-0 rounded-xl border-2 border-red-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 animate-ping"></div>
-        </button>
-        
-        {/* Floating like count */}
-        <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full shadow-lg transform scale-0 group-hover:scale-100 transition-transform duration-300">
-          {likeCount}
-        </div>
-      </div>
+      
       
       {/* Share Button */}
-      <div className="group relative">
-        <button
-          onClick={(e) => e.preventDefault()}
-          className="relative p-3 text-gray-400 hover:text-blue-500 transition-all duration-300 transform hover:scale-125 hover:-translate-y-1 bg-gray-50 hover:bg-blue-50 rounded-xl shadow-sm hover:shadow-lg hover:shadow-blue-500/25 border border-gray-200 hover:border-blue-300"
-          aria-label="Share article"
-        >
-          {/* Animated background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-xl"></div>
-          
-          {/* Share icon with rotation */}
-          <svg className="w-5 h-5 transition-all duration-300 group-hover:rotate-12 group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z" />
-          </svg>
-          
-          {/* Share animation lines */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-            <div className="absolute top-2 right-2 w-4 h-px bg-blue-400 transform rotate-45 animate-pulse"></div>
-            <div className="absolute bottom-2 left-2 w-3 h-px bg-cyan-400 transform -rotate-45 animate-pulse" style={{animationDelay: '0.2s'}}></div>
-          </div>
-          
-          {/* Ripple effect */}
-          <div className="absolute inset-0 rounded-xl border-2 border-blue-400 opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 animate-ping"></div>
-        </button>
-        
-        {/* Share tooltip */}
-        <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
-          Share
-        </div>
-      </div>
+    
       
     </div>
   </div>
